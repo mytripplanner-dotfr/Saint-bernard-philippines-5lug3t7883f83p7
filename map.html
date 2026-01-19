@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Voyage - Saint bernard philippines</title>
+  <style>
+    :root { --primary: #1a73e8; --bg-sidebar: #ffffff; }
+    body { margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; display: flex; height: 100vh; height: 100dvh; overflow: hidden; color: #333; }
+    #sidebar { width: 400px; background: var(--bg-sidebar); height: 100%; display: flex; flex-direction: column; box-shadow: 4px 0 15px rgba(0,0,0,0.08); z-index: 10; transition: 0.3s ease; }
+    #map { flex: 1; height: 100%; position: relative; }
+    
+    .sidebar-header { padding: 10px 15px; border-bottom: 1px solid #eee; background: #fff; flex-shrink: 0; }
+    .filter-group { display: flex; overflow-x: auto; white-space: nowrap; gap: 8px; padding: 5px 0 10px 0; scrollbar-width: none; }
+    .filter-btn { padding: 8px 16px; border: 1px solid #dfe1e5; border-radius: 20px; background: white; cursor: pointer; font-size: 13px; font-weight: 600; }
+    .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+    .step-nav { display: flex; gap: 8px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }
+    .step-badge { padding: 6px 12px; border-radius: 15px; font-size: 11px; font-weight: 700; background: #f1f3f4; color: #5f6368; cursor: pointer; white-space: nowrap; border: 1px solid transparent; }
+    .step-badge.active { background: #e8f0fe; color: var(--primary); border-color: var(--primary); }
+
+    #poi-content { flex-grow: 1; overflow-y: auto; position: relative; }
+    .poi-detail { display: flex; flex-direction: column; min-height: 100%; }
+    .close-details { position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.6); color: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; z-index: 20; font-size: 20px; }
+    .poi-image { width: 100%; height: 230px; object-fit: cover; background: #eee; }
+    .poi-body { padding: 20px; flex-grow: 1; }
+    .poi-body h2 { margin: 0 0 10px 0; font-size: 20px; line-height: 1.3; }
+    
+    .badge-container { margin-bottom: 10px; }
+    .badge { display: inline-block; background: #f1f3f4; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-right: 5px; }
+    .badge-day { background: #e8f0fe; color: var(--primary); }
+    
+    .btn-group { display: flex; gap: 10px; padding: 15px 20px; background: #fff; border-top: 1px solid #f0f0f0; position: sticky; bottom: 0; }
+    .btn { flex: 1; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 14px; }
+    .btn-main { background: var(--primary); color: white; }
+    .btn-outline { border: 1px solid #dadce0; color: #1a73e8; }
+    .placeholder { padding: 40px 20px; text-align: center; color: #70757a; font-size: 14px; }
+
+    @media (max-width: 768px) {
+      body { flex-direction: column-reverse; }
+      #sidebar { width: 100%; max-height: 55%; }
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <div class="filter-group" id="day-filters">
+        <button class="filter-btn active" onclick="filterByDay('all', this)">Toutes</button>
+      </div>
+    </div>
+    <div id="poi-content">
+      <div class="placeholder">Sélectionnez une journée pour explorer les étapes.</div>
+    </div>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+  <script>
+    let map, markerCluster;
+    let markersArray = [];
+    let initialCenter, initialZoom;
+    const locations = [{"lat":14.5122739,"lng":121.016508,"name":"Aéroport international Ninoy Aquino, Manille","jour":2,"titre":"","type":"aéroport","markerColor":"yellow","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=14.5122739,121.016508&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=14.5122739,121.016508"},{"lat":11.2267191,"lng":125.0261297,"name":"Aéroport Daniel Z. Romualdez, Tacloban","jour":2,"titre":"","type":"aéroport","markerColor":"yellow","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=11.2267191,125.0261297&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=11.2267191,125.0261297"},{"lat":10.0786787,"lng":125.0057695,"name":"Padre Burgos, Southern Leyte","jour":2,"titre":"","type":"ville côtière","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.0786787,125.0057695&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.0786787,125.0057695"},{"lat":10.007202,"lng":125.028963,"name":"Tangkaan Beach, Padre Burgos","jour":3,"titre":"","type":"plage","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.007202,125.028963&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.007202,125.028963"},{"lat":10.037114,"lng":124.9816132,"name":"Kuting Beach, Padre Burgos","jour":3,"titre":"","type":"plage","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.037114,124.9816132&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.037114,124.9816132"},{"lat":9.9302782,"lng":125.0746026,"name":"Limasawa Island, Southern Leyte","jour":4,"titre":"","type":"île historique","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=9.9302782,125.0746026&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=9.9302782,125.0746026"},{"lat":9.9078501,"lng":125.07496,"name":"First Mass Shrine, Limasawa Island","jour":4,"titre":"","type":"site historique","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=9.9078501,125.07496&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=9.9078501,125.07496"},{"lat":13.7443125,"lng":121.4014375,"name":"Mainit Hot Spring, San Juan","jour":5,"titre":"","type":"source chaude","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=13.7443125,121.4014375&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=13.7443125,121.4014375"},{"lat":10.1312296,"lng":124.8599017,"name":"Maasin Public Market, Maasin City","jour":5,"titre":"","type":"marché","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.1312296,124.8599017&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.1312296,124.8599017"},{"lat":10.1327199,"lng":124.8408103,"name":"Busay Falls, Maasin City","jour":6,"titre":"","type":"cascade","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.1327199,124.8408103&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.1327199,124.8408103"},{"lat":10.1324953,"lng":124.8375957,"name":"Maasin Cathedral, Maasin City","jour":7,"titre":"","type":"cathédrale","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.1324953,124.8375957&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.1324953,124.8375957"},{"lat":10.4964519,"lng":124.9979782,"name":"Agas-Agas Bridge Viewpoint, Sogod","jour":8,"titre":"","type":"point de vue","markerColor":"green","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.4964519,124.9979782&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.4964519,124.9979782"},{"lat":10.0786787,"lng":125.0057695,"name":"Padre Burgos Marine Sanctuary, Southern Leyte","jour":9,"titre":"","type":"sanctuaire marin","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.0786787,125.0057695&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.0786787,125.0057695"},{"lat":10.3223033,"lng":125.1198028,"name":"Saint Bernard, Southern Leyte","jour":10,"titre":"","type":"municipalité","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.3223033,125.1198028&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.3223033,125.1198028"},{"lat":10.3346206,"lng":125.1708741,"name":"Mangrove Area, Southern Leyte","jour":11,"titre":"","type":"écosystème","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.3346206,125.1708741&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.3346206,125.1708741"},{"lat":10.2488899,"lng":124.7501901,"name":"Canigao Island, Matalom","jour":13,"titre":"","type":"île","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=10.2488899,124.7501901&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=10.2488899,124.7501901"},{"lat":11.2267191,"lng":125.0261297,"name":"Aéroport Daniel Z. Romualdez, Tacloban","jour":15,"titre":"","type":"aéroport","markerColor":"yellow","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=11.2267191,125.0261297&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=11.2267191,125.0261297"},{"lat":14.5122739,"lng":121.016508,"name":"Aéroport international Ninoy Aquino, Manille","jour":15,"titre":"","type":"aéroport","markerColor":"yellow","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=14.5122739,121.016508&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=14.5122739,121.016508"},{"lat":14.5365709,"lng":120.9799721,"name":"SM Mall of Asia, Pasay","jour":16,"titre":"","type":"centre commercial","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=14.5365709,120.9799721&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=14.5365709,120.9799721"}];
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoomControl: true,
+        streetViewControl: false,
+        mapTypeControl: false,
+        styles: [{ featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }]
+      });
+
+      const days = [...new Set(locations.map(l => l.jour))].sort((a,b) => a - b);
+      const filterContainer = document.getElementById('day-filters');
+      days.forEach(day => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.innerText = 'Jour ' + day;
+        btn.onclick = function() { filterByDay(day, this); };
+        filterContainer.appendChild(btn);
+      });
+
+      const bounds = new google.maps.LatLngBounds();
+      locations.forEach((loc, index) => {
+        const marker = new google.maps.Marker({
+          position: { lat: loc.lat, lng: loc.lng },
+          // URL corrigée pour les icônes
+          icon: 'https://maps.google.com/mapfiles/ms/icons/' + loc.markerColor + '-dot.png',
+          label: { text: String(loc.jour), color: 'white', fontSize: '11px', fontWeight: 'bold' },
+          data: loc
+        });
+        marker.addListener('click', () => updateSidebar(loc));
+        markersArray.push(marker);
+        bounds.extend(marker.getPosition());
+      });
+
+      markerCluster = new markerClusterer.MarkerClusterer({ map, markers: markersArray });
+
+      if (locations.length > 0) {
+        map.fitBounds(bounds);
+        google.maps.event.addListenerOnce(map, 'idle', () => {
+          if (map.getZoom() > 14) map.setZoom(14);
+          initialCenter = map.getCenter();
+          initialZoom = map.getZoom();
+        });
+      }
+    }
+
+    function updateSidebar(poi) {
+      const container = document.getElementById('poi-content');
+      const daySteps = locations.filter(l => l.jour === poi.jour);
+      let stepHtml = '';
+      
+      if (daySteps.length > 1) {
+        stepHtml = '<div class="step-nav">';
+        daySteps.forEach((step, idx) => {
+          const active = (step.name === poi.name && step.lat === poi.lat) ? 'active' : '';
+          const locIdx = locations.findIndex(l => l === step);
+          stepHtml += `<div class="step-badge ${active}" onclick="updateSidebarByIndex(${locIdx})">Étape ${idx + 1}</div>`;
+        });
+        stepHtml += '</div>';
+      }
+
+      container.innerHTML = `
+        <div class="poi-detail">
+          <button class="close-details" onclick="closeSidebar()">✕</button>
+          <img src="${poi.streetViewUrl}" class="poi-image" onerror="this.style.display='none'">
+          <div class="poi-body">
+            ${stepHtml}
+            <div class="badge-container">
+              <span class="badge badge-day">Jour ${poi.jour}</span>
+              <span class="badge">${poi.type}</span>
+            </div>
+            <h2>${poi.name}</h2>
+            <p>${poi.titre}</p>
+          </div>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${poi.lat},${poi.lng}" target="_blank" class="btn btn-main">Itinéraire</a>
+            <a href="${poi.streetViewLinkUrl}" target="_blank" class="btn btn-outline">Street View</a>
+          </div>
+        </div>
+      `;
+      
+      // Déplacement et zoom unique ici
+      map.panTo({ lat: poi.lat, lng: poi.lng });
+      map.setZoom(14);
+      container.scrollTop = 0;
+    }
+
+    window.updateSidebarByIndex = function(index) {
+      updateSidebar(locations[index]);
+    };
+
+    function filterByDay(day, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filteredMarkers = day === 'all' ? markersArray : markersArray.filter(m => m.data.jour === day);
+      markerCluster.clearMarkers();
+      markerCluster.addMarkers(filteredMarkers);
+
+      if (day === 'all') {
+        map.setCenter(initialCenter);
+        map.setZoom(initialZoom);
+        closeSidebar();
+      } else if (filteredMarkers.length > 0) {
+        // Appelle la sidebar pour le premier point, qui gère aussi le panTo/zoom
+        updateSidebar(filteredMarkers[0].data);
+      }
+    }
+
+    function closeSidebar() {
+      document.getElementById('poi-content').innerHTML = '<div class="placeholder">Sélectionnez une journée pour explorer les étapes.</div>';
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI&callback=initMap"></script>
+</body>
+</html>
