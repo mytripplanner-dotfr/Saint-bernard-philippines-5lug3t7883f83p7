@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évasion Relaxante aux Philippines : Les Trésors Cachés de Saint Bernard et Leyte du Sud </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token="/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Départ de France et Vol vers Manille</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Arrivée à Manille et Vol Domestique vers Tacloban</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Détente sur les Plages de Padre Burgos</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Excursion à l'Île de Limasawa : Histoire et Plages</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Sources Chaudes de Mainit et Vie Locale</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Cascade de Busay et Paysages Verdoyants</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Culture et Architecture à Maasin City</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Vue Panoramique du Pont Agas-Agas et Détente</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Snorkeling et Plages Secrètes de Padre Burgos</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Journée Libre ou Exploration de Saint Bernard</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Découverte des Mangroves et Vie Sauvage</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Aube sur la Mer et Matinée Libre</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Excursion à Canigao Island : Le "Petit Boracay"</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Journée Bien-être et Préparation au Départ</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Retour vers Tacloban et Vol pour Manille</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Manille : Détente ou Brève Exploration</a>
+            
+                <a href="#jour-17" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J17 Départ de Manille vers la France</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">SAINT BERNARD- PHILIPPINES</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Évasion Relaxante aux Philippines : Les Trésors Cachés de Saint Bernard et Leyte du Sud</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 17 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 2450 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 20h (environ, incluant les escales depuis Marie, France)</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de France et Vol vers Manille</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Votre aventure commence par un long vol depuis la France. Préparez-vous à traverser les fuseaux horaires pour atteindre la vibrante capitale philippine, Manille. Une journée dédiée au voyage et à l'anticipation des merveilles à venir.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>✈️</strong>: Départ de l'aéroport de Paris (CDG)</li><li><strong>🌍</strong>: Vol international vers Manille (MNL)</li><li><strong>😴</strong>: Nuit à bord de l'avion</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil de vol</p>
+                                <p class="text-gray-700">Prévoyez des vêtements confortables, un coussin de voyage et de quoi vous divertir pour ce long trajet. Hydratez-vous régulièrement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Manille et Vol Domestique vers Tacloban</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après votre arrivée à Manille, vous effectuerez une correspondance pour un vol domestique vers Tacloban, porte d'entrée de la région de Leyte. De là, un transfert vous mènera à votre hébergement dans le sud de Leyte, pour une première immersion douce.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬</strong>: Arrivée à l'aéroport international de Manille (MNL)</li><li><strong>✈️</strong>: Vol domestique Manille (MNL) - Tacloban (TAC)</li><li><strong>🚗</strong>: Transfert vers Padre Burgos, Leyte du Sud</li><li><strong>🛏️</strong>: Installation et repos à l'hôtel</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Logistique</p>
+                                <p class="text-gray-700">Les transferts depuis Tacloban vers le sud de Leyte peuvent prendre 2 à 3 heures en van ou bus. Prévoyez de l'eau et des snacks.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Détente sur les Plages de Padre Burgos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Commencez votre séjour en douceur par une journée de pure détente sur les plages immaculées de Padre Burgos. Profitez du soleil, de la mer turquoise et du sable fin pour vous ressourcer après le long voyage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚶‍♂️</strong>: Promenade tranquille sur Tangkaan Beach</li><li><strong>🏊</strong>: Baignade et farniente à Kuting Beach</li><li><strong>🌅</strong>: Coucher de soleil sur la mer</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧴 Protection solaire</p>
+                                <p class="text-gray-700">Le soleil philippin est intense. N'oubliez pas votre crème solaire biodégradable, chapeau et lunettes de soleil.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion à l'Île de Limasawa : Histoire et Plages</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Partez en bateau pour l'historique île de Limasawa, site de la première messe catholique aux Philippines. Explorez ses plages paisibles et imprégnez-vous de son atmosphère sereine, loin de l'agitation.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚤</strong>: Excursion en bateau vers l'île de Limasawa</li><li><strong>🚶‍♂️</strong>: Visite du site de la Première Messe</li><li><strong>🐠</strong>: Snorkeling et détente sur les plages de l'île</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📜 Un peu d'histoire</p>
+                                <p class="text-gray-700">Limasawa est célèbre pour avoir accueilli la première messe catholique aux Philippines en 1521, marquant l'arrivée du christianisme dans l'archipel.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sources Chaudes de Mainit et Vie Locale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Une journée dédiée à la relaxation profonde avec une visite aux sources chaudes naturelles de Mainit. L'après-midi, explorez un marché local pour découvrir les saveurs et l'artisanat philippins.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>♨️</strong>: Baignade relaxante aux sources chaudes de Mainit</li><li><strong>🚶‍♂️</strong>: Promenade et découverte du marché public de Maasin</li><li><strong>🍽️</strong>: Dégustation de spécialités locales</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Monnaie locale</p>
+                                <p class="text-gray-700">La monnaie est le Peso philippin (PHP). Prévoyez de la petite monnaie pour les marchés locaux et les transports en tricycle.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cascade de Busay et Paysages Verdoyants</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Partez à la découverte de la magnifique cascade de Busay, nichée dans un écrin de verdure. Profitez d'une balade douce dans la nature et d'une baignade rafraîchissante dans ses bassins naturels.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗</strong>: Trajet vers la cascade de Busay</li><li><strong>🚶‍♀️</strong>: Petite randonnée facile jusqu'à la cascade</li><li><strong>💦</strong>: Baignade rafraîchissante et pique-nique</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Chaussures</p>
+                                <p class="text-gray-700">Portez des chaussures confortables et antidérapantes pour la marche vers la cascade, le chemin peut être humide.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Culture et Architecture à Maasin City</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez Maasin City, la capitale provinciale. Visitez sa cathédrale historique et promenez-vous dans le centre-ville pour observer la vie quotidienne philippine et son architecture coloniale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛪</strong>: Visite de la Cathédrale de l'Assomption de Maasin</li><li><strong>🚶‍♂️</strong>: Balade dans le centre-ville et le long de la promenade</li><li><strong>🛍️</strong>: Découverte des boutiques et cafés locaux</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👗 Tenue vestimentaire</p>
+                                <p class="text-gray-700">Lors de la visite de lieux de culte, il est respectueux de porter des vêtements couvrant les épaules et les genoux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vue Panoramique du Pont Agas-Agas et Détente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Admirez la prouesse architecturale du Pont Agas-Agas, le plus haut pont des Philippines, depuis un point de vue sécurisé. L'après-midi est libre pour la détente ou une activité de votre choix.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗</strong>: Trajet vers le point de vue du Pont Agas-Agas</li><li><strong>📸</strong>: Admiration du paysage et photos</li><li><strong>🧘</strong>: Après-midi libre pour la détente ou un massage local</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Attention</p>
+                                <p class="text-gray-700">Le pont est connu pour des activités extrêmes, mais nous nous limiterons à l'observation du paysage depuis des zones sécurisées.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Snorkeling et Plages Secrètes de Padre Burgos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Retour à Padre Burgos pour une journée dédiée à l'exploration sous-marine. Découvrez des spots de snorkeling préservés et des plages moins fréquentées, idéales pour la tranquillité et l'observation de la vie marine.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚤</strong>: Excursion en bateau pour le snorkeling</li><li><strong>🐠</strong>: Exploration des récifs coralliens colorés</li><li><strong>🏖️</strong>: Pique-nique sur une plage isolée</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">♻️ Respect de l'environnement</p>
+                                <p class="text-gray-700">Ne touchez pas les coraux et ne laissez aucun déchet. Utilisez une crème solaire respectueuse des océans.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée Libre ou Exploration de Saint Bernard</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée libre pour vous détendre, relire un livre au bord de la mer, ou explorer davantage les environs de Saint Bernard à votre rythme. C'est l'occasion de s'imprégner de l'ambiance locale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🧘</strong>: Matinée libre pour la relaxation</li><li><strong>🚶‍♂️</strong>: Balade dans le village de Saint Bernard</li><li><strong>🍽️</strong>: Dîner dans un restaurant local</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue locale</p>
+                                <p class="text-gray-700">Le cebuano et le waray-waray sont les langues locales, mais l'anglais est largement compris, surtout dans les zones touristiques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte des Mangroves et Vie Sauvage</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les écosystèmes de mangroves en kayak ou en bateau, une activité paisible pour observer la faune locale et comprendre l'importance de ces forêts côtières uniques.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛶</strong>: Excursion en kayak ou bateau dans les mangroves</li><li><strong>🐦</strong>: Observation des oiseaux et de la vie marine</li><li><strong>🌿</strong>: Apprentissage sur l'écosystème des mangroves</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦟 Insectes</p>
+                                <p class="text-gray-700">Prévoyez un répulsif anti-moustiques, surtout lors des excursions dans les zones humides comme les mangroves.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aube sur la Mer et Matinée Libre</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Commencez la journée par un lever de soleil spectaculaire sur la mer, suivi d'une matinée libre pour profiter des installations de votre hébergement ou d'une dernière balade sur la plage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>☀️</strong>: Lever de soleil matinal sur la côte</li><li><strong>🧘</strong>: Matinée libre pour la détente ou la lecture</li><li><strong>🚶‍♂️</strong>: Balade tranquille le long de la plage</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Les levers et couchers de soleil aux Philippines offrent des opportunités photographiques incroyables. N'oubliez pas votre appareil!</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion à Canigao Island : Le "Petit Boracay"</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez Canigao Island, souvent surnommée le "Petit Boracay" pour son sable blanc et ses eaux cristallines. Une journée parfaite pour le snorkeling, la baignade et la détente sur cette île paradisiaque.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚤</strong>: Trajet en bateau vers Canigao Island</li><li><strong>🏖️</strong>: Baignade et farniente sur le sable blanc</li><li><strong>🐠</strong>: Snorkeling dans les eaux claires de l'île</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Repas sur l'île</p>
+                                <p class="text-gray-700">Des petits stands proposent souvent des fruits de mer frais grillés sur l'île. Une expérience culinaire authentique!</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée Bien-être et Préparation au Départ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée de bien-être avec un massage traditionnel philippin. Préparez-vous doucement pour le départ en faisant quelques achats de souvenirs ou en savourant une dernière fois la cuisine locale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>💆‍♀️</strong>: Massage traditionnel philippin (Hilôt)</li><li><strong>🎁</strong>: Achats de souvenirs locaux</li><li><strong>🍽️</strong>: Dîner d'adieu avec des spécialités régionales</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Pensez aux produits artisanaux locaux comme les paniers tressés, les bijoux en coquillages ou les produits à base de noix de coco.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers Tacloban et Vol pour Manille</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Il est temps de quitter les charmes de Leyte du Sud. Un transfert vous ramènera à l'aéroport de Tacloban pour votre vol domestique vers Manille, où vous passerez la nuit avant votre vol international.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗</strong>: Transfert de Southern Leyte à l'aéroport de Tacloban (TAC)</li><li><strong>✈️</strong>: Vol domestique Tacloban (TAC) - Manille (MNL)</li><li><strong>🛏️</strong>: Installation à l'hôtel près de l'aéroport de Manille</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Timing</p>
+                                <p class="text-gray-700">Assurez-vous d'avoir suffisamment de temps entre votre vol domestique et votre vol international, surtout à Manille où le trafic peut être dense.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Manille : Détente ou Brève Exploration</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée aux Philippines. Selon l'heure de votre vol, vous pourrez choisir entre une matinée de détente à l'hôtel ou une brève exploration des environs de Manille, comme un centre commercial ou un parc.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong> leisurely</strong>: Matinée libre à l'hôtel</li><li><strong>🛍️</strong>: Visite d'un centre commercial (ex: Mall of Asia) ou d'un parc</li><li><strong>🍽️</strong>: Dernier repas philippin</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚕 Transports à Manille</p>
+                                <p class="text-gray-700">Utilisez les applications de VTC (Grab) pour des trajets plus sûrs et des prix fixes à Manille, ou les taxis avec compteur.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-17" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 17</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Manille vers la France</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le jour du départ. Après un petit-déjeuner, vous vous dirigerez vers l'aéroport pour prendre votre vol international de retour vers la France, la tête remplie de souvenirs inoubliables des Philippines.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🍳</strong>: Petit-déjeuner à l'hôtel</li><li><strong>🚗</strong>: Transfert vers l'aéroport international de Manille (MNL)</li><li><strong>🛫</strong>: Vol international de retour vers la France</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Saint-bernard-philippines-5lug3t7883f83p7/main/jour17.jpg" class="w-full h-64 object-cover" alt="Jour 17">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛂 Formalités</p>
+                                <p class="text-gray-700">Arrivez à l'aéroport au moins 3 heures avant votre vol international pour les formalités d'enregistrement et de sécurité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛬 Budget vol: </strong>A partir de 659 €/pers (international A/R)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🚆 Budget transports: </strong>Environ 350 €/pers (vols domestiques, transferts, transports locaux)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥗 Budget repas: </strong>Environ 600 €/pers (35-40€/jour pour 17 jours)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛏️ Budget logement: </strong>Environ 750 €/pers (50€/nuit pour 15 nuits en 3*)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🎭 Budget activités: </strong>Environ 300 €/pers (excursions, entrées, snorkeling, massage)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Mars à Mai</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Novembre à Février</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">☔ La saison sèche s'étend de novembre à mai. Mai marque le début de la saison des pluies, avec des averses tropicales possibles mais souvent courtes.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🔌 Le courant est de 220V, 60Hz. Les prises sont de type A, B et C. Un adaptateur universel est recommandé.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ L'anglais est largement parlé et compris, surtout dans les zones touristiques et les grandes villes. Le tagalog est la langue nationale.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">📶 Une carte SIM locale (Globe, Smart) est facile à obtenir et peu coûteuse pour rester connecté. Le Wi-Fi est disponible dans la plupart des hébergements.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💧 Il est conseillé de boire de l'eau en bouteille. Évitez les glaçons dans les boissons si vous avez un estomac sensible.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Anecdotes
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>💡 Le saviez-vous ?:</strong> Les Philippines sont le seul pays majoritairement catholique d'Asie, une influence héritée de plus de 300 ans de colonisation espagnole. Cela se reflète dans les nombreuses églises et les fêtes religieuses vibrantes.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🙃 Insolite:</strong> Le "Jeepney" est le moyen de transport public le plus emblématique des Philippines. Ces véhicules colorés, à l'origine des jeeps militaires américaines laissées après la Seconde Guerre mondiale, sont devenus de véritables œuvres d'art roulantes, décorées de motifs exubérants et de phrases religieuses ou humoristiques.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Spécialités culinaires
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍴 Adobo:</strong> Plat national philippin, l'Adobo est un mélange savoureux de viande (poulet ou porc) marinée et mijotée dans du vinaigre, de la sauce soja, de l'ail et des grains de poivre. Un incontournable!</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍲 Sinigang:</strong> Une soupe aigre et savoureuse, souvent préparée avec du porc, du poisson ou des crevettes, et des légumes, le tout mijoté dans un bouillon acidulé à base de tamarin. Parfait pour les palais aventureux.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍧 Halo-Halo:</strong> Le dessert philippin par excellence! Un mélange rafraîchissant de glace pilée, de lait évaporé, de fruits confits, de haricots sucrés, de gelées, de flan et souvent surmonté d'une boule de glace à l'ube (igname violette).</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Saint-bernard-philippines-5lug3t7883f83p7/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/CDG-MNL/2026-05-15/2026-06-01" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://philippines.travel/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Tourisme Philippines</strong></a></li>
+                    
+                        <li><a href="https://www.pagasa.dost.gov.ph/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Philippines</strong></a></li>
+                    
+                        <li><a href="https://www.philippineairlines.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>✈️ Philippine Airlines</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
