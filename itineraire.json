@@ -1,0 +1,527 @@
+{
+  "pays": "Philippines",
+  "drapeau": "🇵🇭",
+  "symbole": "☀️",
+  "titre": "Évasion Relaxante aux Philippines : Les Trésors Cachés de Saint Bernard et Leyte du Sud",
+  "budget_total": "Environ 2450 €/personne",
+  "duree": "17 jours",
+  "temps_vol": "20h (environ, incluant les escales depuis Marie, France)",
+  "escale": "1 à 2",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "✈️",
+      "titre": "Départ de France et Vol vers Manille",
+      "legende": "Votre aventure commence par un long vol depuis la France. Préparez-vous à traverser les fuseaux horaires pour atteindre la vibrante capitale philippine, Manille. Une journée dédiée au voyage et à l'anticipation des merveilles à venir.",
+      "lieu": "En vol / Manille",
+      "activites": [
+        "<strong>✈️</strong>: Départ de l'aéroport de Paris (CDG)",
+        "<strong>🌍</strong>: Vol international vers Manille (MNL)",
+        "<strong>😴</strong>: Nuit à bord de l'avion"
+      ],
+      "illustration": "philippines_flight.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil de vol",
+          "texte": "Prévoyez des vêtements confortables, un coussin de voyage et de quoi vous divertir pour ce long trajet. Hydratez-vous régulièrement."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🛬",
+      "titre": "Arrivée à Manille et Vol Domestique vers Tacloban",
+      "legende": "Après votre arrivée à Manille, vous effectuerez une correspondance pour un vol domestique vers Tacloban, porte d'entrée de la région de Leyte. De là, un transfert vous mènera à votre hébergement dans le sud de Leyte, pour une première immersion douce.",
+      "lieu": "Manille / Tacloban / Padre Burgos",
+      "activites": [
+        "<strong>🛬</strong>: Arrivée à l'aéroport international de Manille (MNL)",
+        "<strong>✈️</strong>: Vol domestique Manille (MNL) - Tacloban (TAC)",
+        "<strong>🚗</strong>: Transfert vers Padre Burgos, Leyte du Sud",
+        "<strong>🛏️</strong>: Installation et repos à l'hôtel"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport international Ninoy Aquino, Manille",
+          "categorie": "Aéroport",
+          "coords": { "lat": 14.5086, "lng": 121.0194 }
+        },
+        {
+          "nom_recherche": "Aéroport Daniel Z. Romualdez, Tacloban",
+          "categorie": "Aéroport",
+          "coords": { "lat": 11.2272, "lng": 125.0278 }
+        },
+        {
+          "nom_recherche": "Padre Burgos, Southern Leyte",
+          "categorie": "Ville côtière",
+          "coords": { "lat": 10.0500, "lng": 125.0700 }
+        }
+      ],
+      "illustration": "philippines_tacloban_transfer.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Logistique",
+          "texte": "Les transferts depuis Tacloban vers le sud de Leyte peuvent prendre 2 à 3 heures en van ou bus. Prévoyez de l'eau et des snacks."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏖️",
+      "titre": "Détente sur les Plages de Padre Burgos",
+      "legende": "Commencez votre séjour en douceur par une journée de pure détente sur les plages immaculées de Padre Burgos. Profitez du soleil, de la mer turquoise et du sable fin pour vous ressourcer après le long voyage.",
+      "lieu": "Padre Burgos",
+      "activites": [
+        "<strong>🚶‍♂️</strong>: Promenade tranquille sur Tangkaan Beach",
+        "<strong>🏊</strong>: Baignade et farniente à Kuting Beach",
+        "<strong>🌅</strong>: Coucher de soleil sur la mer"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Tangkaan Beach, Padre Burgos",
+          "categorie": "Plage",
+          "coords": { "lat": 10.0380, "lng": 125.0650 }
+        },
+        {
+          "nom_recherche": "Kuting Beach, Padre Burgos",
+          "categorie": "Plage",
+          "coords": { "lat": 10.0450, "lng": 125.0750 }
+        }
+      ],
+      "illustration": "philippines_padre_burgos_beach.jpg",
+      "encarts": [
+        {
+          "symbole": "🧴",
+          "titre": "Protection solaire",
+          "texte": "Le soleil philippin est intense. N'oubliez pas votre crème solaire biodégradable, chapeau et lunettes de soleil."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏝️",
+      "titre": "Excursion à l'Île de Limasawa : Histoire et Plages",
+      "legende": "Partez en bateau pour l'historique île de Limasawa, site de la première messe catholique aux Philippines. Explorez ses plages paisibles et imprégnez-vous de son atmosphère sereine, loin de l'agitation.",
+      "lieu": "Limasawa Island",
+      "activites": [
+        "<strong>🚤</strong>: Excursion en bateau vers l'île de Limasawa",
+        "<strong>🚶‍♂️</strong>: Visite du site de la Première Messe",
+        "<strong>🐠</strong>: Snorkeling et détente sur les plages de l'île"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Limasawa Island, Southern Leyte",
+          "categorie": "Île historique",
+          "coords": { "lat": 9.9833, "lng": 125.0833 }
+        },
+        {
+          "nom_recherche": "First Mass Shrine, Limasawa Island",
+          "categorie": "Site historique",
+          "coords": { "lat": 9.9850, "lng": 125.0850 }
+        }
+      ],
+      "illustration": "philippines_limasawa.jpg",
+      "encarts": [
+        {
+          "symbole": "📜",
+          "titre": "Un peu d'histoire",
+          "texte": "Limasawa est célèbre pour avoir accueilli la première messe catholique aux Philippines en 1521, marquant l'arrivée du christianisme dans l'archipel."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "♨️",
+      "titre": "Sources Chaudes de Mainit et Vie Locale",
+      "legende": "Une journée dédiée à la relaxation profonde avec une visite aux sources chaudes naturelles de Mainit. L'après-midi, explorez un marché local pour découvrir les saveurs et l'artisanat philippins.",
+      "lieu": "San Juan / Maasin",
+      "activites": [
+        "<strong>♨️</strong>: Baignade relaxante aux sources chaudes de Mainit",
+        "<strong>🚶‍♂️</strong>: Promenade et découverte du marché public de Maasin",
+        "<strong>🍽️</strong>: Dégustation de spécialités locales"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Mainit Hot Spring, San Juan",
+          "categorie": "Source chaude",
+          "coords": { "lat": 10.2000, "lng": 125.0000 }
+        },
+        {
+          "nom_recherche": "Maasin Public Market, Maasin City",
+          "categorie": "Marché",
+          "coords": { "lat": 10.1360, "lng": 124.8480 }
+        }
+      ],
+      "illustration": "philippines_hotspring.jpg",
+      "encarts": [
+        {
+          "symbole": "💰",
+          "titre": "Monnaie locale",
+          "texte": "La monnaie est le Peso philippin (PHP). Prévoyez de la petite monnaie pour les marchés locaux et les transports en tricycle."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🌳",
+      "titre": "Cascade de Busay et Paysages Verdoyants",
+      "legende": "Partez à la découverte de la magnifique cascade de Busay, nichée dans un écrin de verdure. Profitez d'une balade douce dans la nature et d'une baignade rafraîchissante dans ses bassins naturels.",
+      "lieu": "Maasin City",
+      "activites": [
+        "<strong>🚗</strong>: Trajet vers la cascade de Busay",
+        "<strong>🚶‍♀️</strong>: Petite randonnée facile jusqu'à la cascade",
+        "<strong>💦</strong>: Baignade rafraîchissante et pique-nique"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Busay Falls, Maasin City",
+          "categorie": "Cascade",
+          "coords": { "lat": 10.1600, "lng": 124.8700 }
+        }
+      ],
+      "illustration": "philippines_busay_falls.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Chaussures",
+          "texte": "Portez des chaussures confortables et antidérapantes pour la marche vers la cascade, le chemin peut être humide."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "⛪",
+      "titre": "Culture et Architecture à Maasin City",
+      "legende": "Explorez Maasin City, la capitale provinciale. Visitez sa cathédrale historique et promenez-vous dans le centre-ville pour observer la vie quotidienne philippine et son architecture coloniale.",
+      "lieu": "Maasin City",
+      "activites": [
+        "<strong>⛪</strong>: Visite de la Cathédrale de l'Assomption de Maasin",
+        "<strong>🚶‍♂️</strong>: Balade dans le centre-ville et le long de la promenade",
+        "<strong>🛍️</strong>: Découverte des boutiques et cafés locaux"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Maasin Cathedral, Maasin City",
+          "categorie": "Cathédrale",
+          "coords": { "lat": 10.1360, "lng": 124.8480 }
+        }
+      ],
+      "illustration": "philippines_maasin_cathedral.jpg",
+      "encarts": [
+        {
+          "symbole": "👗",
+          "titre": "Tenue vestimentaire",
+          "texte": "Lors de la visite de lieux de culte, il est respectueux de porter des vêtements couvrant les épaules et les genoux."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🌉",
+      "titre": "Vue Panoramique du Pont Agas-Agas et Détente",
+      "legende": "Admirez la prouesse architecturale du Pont Agas-Agas, le plus haut pont des Philippines, depuis un point de vue sécurisé. L'après-midi est libre pour la détente ou une activité de votre choix.",
+      "lieu": "Sogod / Saint Bernard",
+      "activites": [
+        "<strong>🚗</strong>: Trajet vers le point de vue du Pont Agas-Agas",
+        "<strong>📸</strong>: Admiration du paysage et photos",
+        "<strong>🧘</strong>: Après-midi libre pour la détente ou un massage local"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Agas-Agas Bridge Viewpoint, Sogod",
+          "categorie": "Point de vue",
+          "coords": { "lat": 10.3000, "lng": 124.9800 }
+        }
+      ],
+      "illustration": "philippines_agas_agas_bridge.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Attention",
+          "texte": "Le pont est connu pour des activités extrêmes, mais nous nous limiterons à l'observation du paysage depuis des zones sécurisées."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🐠",
+      "titre": "Snorkeling et Plages Secrètes de Padre Burgos",
+      "legende": "Retour à Padre Burgos pour une journée dédiée à l'exploration sous-marine. Découvrez des spots de snorkeling préservés et des plages moins fréquentées, idéales pour la tranquillité et l'observation de la vie marine.",
+      "lieu": "Padre Burgos",
+      "activites": [
+        "<strong>🚤</strong>: Excursion en bateau pour le snorkeling",
+        "<strong>🐠</strong>: Exploration des récifs coralliens colorés",
+        "<strong>🏖️</strong>: Pique-nique sur une plage isolée"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Padre Burgos Marine Sanctuary, Southern Leyte",
+          "categorie": "Sanctuaire marin",
+          "coords": { "lat": 10.0500, "lng": 125.0700 }
+        }
+      ],
+      "illustration": "philippines_snorkeling.jpg",
+      "encarts": [
+        {
+          "symbole": "♻️",
+          "titre": "Respect de l'environnement",
+          "texte": "Ne touchez pas les coraux et ne laissez aucun déchet. Utilisez une crème solaire respectueuse des océans."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🌴",
+      "titre": "Journée Libre ou Exploration de Saint Bernard",
+      "legende": "Profitez d'une journée libre pour vous détendre, relire un livre au bord de la mer, ou explorer davantage les environs de Saint Bernard à votre rythme. C'est l'occasion de s'imprégner de l'ambiance locale.",
+      "lieu": "Saint Bernard",
+      "activites": [
+        "<strong>🧘</strong>: Matinée libre pour la relaxation",
+        "<strong>🚶‍♂️</strong>: Balade dans le village de Saint Bernard",
+        "<strong>🍽️</strong>: Dîner dans un restaurant local"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Saint Bernard, Southern Leyte",
+          "categorie": "Municipalité",
+          "coords": { "lat": 10.3333, "lng": 125.0667 }
+        }
+      ],
+      "illustration": "philippines_saint_bernard_village.jpg",
+      "encarts": [
+        {
+          "symbole": "🗣️",
+          "titre": "Langue locale",
+          "texte": "Le cebuano et le waray-waray sont les langues locales, mais l'anglais est largement compris, surtout dans les zones touristiques."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🛶",
+      "titre": "Découverte des Mangroves et Vie Sauvage",
+      "legende": "Explorez les écosystèmes de mangroves en kayak ou en bateau, une activité paisible pour observer la faune locale et comprendre l'importance de ces forêts côtières uniques.",
+      "lieu": "Proche de Saint Bernard",
+      "activites": [
+        "<strong>🛶</strong>: Excursion en kayak ou bateau dans les mangroves",
+        "<strong>🐦</strong>: Observation des oiseaux et de la vie marine",
+        "<strong>🌿</strong>: Apprentissage sur l'écosystème des mangroves"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Mangrove Area, Southern Leyte",
+          "categorie": "Écosystème",
+          "coords": { "lat": 10.2500, "lng": 125.0500 }
+        }
+      ],
+      "illustration": "philippines_mangroves.jpg",
+      "encarts": [
+        {
+          "symbole": "🦟",
+          "titre": "Insectes",
+          "texte": "Prévoyez un répulsif anti-moustiques, surtout lors des excursions dans les zones humides comme les mangroves."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🌅",
+      "titre": "Aube sur la Mer et Matinée Libre",
+      "legende": "Commencez la journée par un lever de soleil spectaculaire sur la mer, suivi d'une matinée libre pour profiter des installations de votre hébergement ou d'une dernière balade sur la plage.",
+      "lieu": "Southern Leyte",
+      "activites": [
+        "<strong>☀️</strong>: Lever de soleil matinal sur la côte",
+        "<strong>🧘</strong>: Matinée libre pour la détente ou la lecture",
+        "<strong>🚶‍♂️</strong>: Balade tranquille le long de la plage"
+      ],
+      "illustration": "philippines_sunrise.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Les levers et couchers de soleil aux Philippines offrent des opportunités photographiques incroyables. N'oubliez pas votre appareil!"
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🐠",
+      "titre": "Excursion à Canigao Island : Le \"Petit Boracay\"",
+      "legende": "Découvrez Canigao Island, souvent surnommée le \"Petit Boracay\" pour son sable blanc et ses eaux cristallines. Une journée parfaite pour le snorkeling, la baignade et la détente sur cette île paradisiaque.",
+      "lieu": "Canigao Island (Matalom)",
+      "activites": [
+        "<strong>🚤</strong>: Trajet en bateau vers Canigao Island",
+        "<strong>🏖️</strong>: Baignade et farniente sur le sable blanc",
+        "<strong>🐠</strong>: Snorkeling dans les eaux claires de l'île"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Canigao Island, Matalom",
+          "categorie": "Île",
+          "coords": { "lat": 10.2333, "lng": 124.7500 }
+        }
+      ],
+      "illustration": "philippines_canigao_island.jpg",
+      "encarts": [
+        {
+          "symbole": "🍽️",
+          "titre": "Repas sur l'île",
+          "texte": "Des petits stands proposent souvent des fruits de mer frais grillés sur l'île. Une expérience culinaire authentique!"
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "💆‍♀️",
+      "titre": "Journée Bien-être et Préparation au Départ",
+      "legende": "Profitez d'une journée de bien-être avec un massage traditionnel philippin. Préparez-vous doucement pour le départ en faisant quelques achats de souvenirs ou en savourant une dernière fois la cuisine locale.",
+      "lieu": "Southern Leyte",
+      "activites": [
+        "<strong>💆‍♀️</strong>: Massage traditionnel philippin (Hilôt)",
+        "<strong>🎁</strong>: Achats de souvenirs locaux",
+        "<strong>🍽️</strong>: Dîner d'adieu avec des spécialités régionales"
+      ],
+      "illustration": "philippines_massage.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Pensez aux produits artisanaux locaux comme les paniers tressés, les bijoux en coquillages ou les produits à base de noix de coco."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🚗",
+      "titre": "Retour vers Tacloban et Vol pour Manille",
+      "legende": "Il est temps de quitter les charmes de Leyte du Sud. Un transfert vous ramènera à l'aéroport de Tacloban pour votre vol domestique vers Manille, où vous passerez la nuit avant votre vol international.",
+      "lieu": "Southern Leyte / Tacloban / Manille",
+      "activites": [
+        "<strong>🚗</strong>: Transfert de Southern Leyte à l'aéroport de Tacloban (TAC)",
+        "<strong>✈️</strong>: Vol domestique Tacloban (TAC) - Manille (MNL)",
+        "<strong>🛏️</strong>: Installation à l'hôtel près de l'aéroport de Manille"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport Daniel Z. Romualdez, Tacloban",
+          "categorie": "Aéroport",
+          "coords": { "lat": 11.2272, "lng": 125.0278 }
+        },
+        {
+          "nom_recherche": "Aéroport international Ninoy Aquino, Manille",
+          "categorie": "Aéroport",
+          "coords": { "lat": 14.5086, "lng": 121.0194 }
+        }
+      ],
+      "illustration": "philippines_manila_hotel.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Timing",
+          "texte": "Assurez-vous d'avoir suffisamment de temps entre votre vol domestique et votre vol international, surtout à Manille où le trafic peut être dense."
+        }
+      ]
+    },
+    {
+      "jour": 16,
+      "symbole": "🏙️",
+      "titre": "Manille : Détente ou Brève Exploration",
+      "legende": "Profitez de cette dernière journée aux Philippines. Selon l'heure de votre vol, vous pourrez choisir entre une matinée de détente à l'hôtel ou une brève exploration des environs de Manille, comme un centre commercial ou un parc.",
+      "lieu": "Manille",
+      "activites": [
+        "<strong> leisurely</strong>: Matinée libre à l'hôtel",
+        "<strong>🛍️</strong>: Visite d'un centre commercial (ex: Mall of Asia) ou d'un parc",
+        "<strong>🍽️</strong>: Dernier repas philippin"
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "SM Mall of Asia, Pasay",
+          "categorie": "Centre commercial",
+          "coords": { "lat": 14.5350, "lng": 120.9830 }
+        }
+      ],
+      "illustration": "philippines_manila_mall.jpg",
+      "encarts": [
+        {
+          "symbole": "🚕",
+          "titre": "Transports à Manille",
+          "texte": "Utilisez les applications de VTC (Grab) pour des trajets plus sûrs et des prix fixes à Manille, ou les taxis avec compteur."
+        }
+      ]
+    },
+    {
+      "jour": 17,
+      "symbole": "🛫",
+      "titre": "Départ de Manille vers la France",
+      "legende": "C'est le jour du départ. Après un petit-déjeuner, vous vous dirigerez vers l'aéroport pour prendre votre vol international de retour vers la France, la tête remplie de souvenirs inoubliables des Philippines.",
+      "lieu": "Manille / En vol",
+      "activites": [
+        "<strong>🍳</strong>: Petit-déjeuner à l'hôtel",
+        "<strong>🚗</strong>: Transfert vers l'aéroport international de Manille (MNL)",
+        "<strong>🛫</strong>: Vol international de retour vers la France"
+      ],
+      "illustration": "philippines_departure.jpg",
+      "encarts": [
+        {
+          "symbole": "🛂",
+          "titre": "Formalités",
+          "texte": "Arrivez à l'aéroport au moins 3 heures avant votre vol international pour les formalités d'enregistrement et de sécurité."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "A partir de 659 €/pers (international A/R)", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "Environ 350 €/pers (vols domestiques, transferts, transports locaux)", "symbole": "🚆" },
+    { "titre": "Budget repas:", "legende": "Environ 600 €/pers (35-40€/jour pour 17 jours)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "Environ 750 €/pers (50€/nuit pour 15 nuits en 3*)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "Environ 300 €/pers (excursions, entrées, snorkeling, massage)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Mars à Mai", "symbole": "☀️" },
+    { "titre": "Novembre à Février", "symbole": "🌬️" }
+  ],
+  "infos_pratiques": [
+    { "titre": "La saison sèche s'étend de novembre à mai. Mai marque le début de la saison des pluies, avec des averses tropicales possibles mais souvent courtes.", "symbole": "☔" },
+    { "titre": "Le courant est de 220V, 60Hz. Les prises sont de type A, B et C. Un adaptateur universel est recommandé.", "symbole": "🔌" },
+    { "titre": "L'anglais est largement parlé et compris, surtout dans les zones touristiques et les grandes villes. Le tagalog est la langue nationale.", "symbole": "🗣️" },
+    { "titre": "Une carte SIM locale (Globe, Smart) est facile à obtenir et peu coûteuse pour rester connecté. Le Wi-Fi est disponible dans la plupart des hébergements.", "symbole": "📶" },
+    { "titre": "Il est conseillé de boire de l'eau en bouteille. Évitez les glaçons dans les boissons si vous avez un estomac sensible.", "symbole": "💧" }
+  ],
+  "infos_decallees": [
+    {
+      "symbole": "💡",
+      "titre": "Le saviez-vous ?",
+      "texte": "Les Philippines sont le seul pays majoritairement catholique d'Asie, une influence héritée de plus de 300 ans de colonisation espagnole. Cela se reflète dans les nombreuses églises et les fêtes religieuses vibrantes."
+    },
+    {
+      "symbole": "🙃",
+      "titre": "Insolite",
+      "texte": "Le \"Jeepney\" est le moyen de transport public le plus emblématique des Philippines. Ces véhicules colorés, à l'origine des jeeps militaires américaines laissées après la Seconde Guerre mondiale, sont devenus de véritables œuvres d'art roulantes, décorées de motifs exubérants et de phrases religieuses ou humoristiques."
+    }
+  ],
+  "specialites_culinaires": [
+    {
+      "symbole": "🍴",
+      "titre": "Adobo",
+      "description": "Plat national philippin, l'Adobo est un mélange savoureux de viande (poulet ou porc) marinée et mijotée dans du vinaigre, de la sauce soja, de l'ail et des grains de poivre. Un incontournable!"
+    },
+    {
+      "symbole": "🍲",
+      "titre": "Sinigang",
+      "description": "Une soupe aigre et savoureuse, souvent préparée avec du porc, du poisson ou des crevettes, et des légumes, le tout mijoté dans un bouillon acidulé à base de tamarin. Parfait pour les palais aventureux."
+    },
+    {
+      "symbole": "🍧",
+      "titre": "Halo-Halo",
+      "description": "Le dessert philippin par excellence! Un mélange rafraîchissant de glace pilée, de lait évaporé, de fruits confits, de haricots sucrés, de gelées, de flan et souvent surmonté d'une boule de glace à l'ube (igname violette)."
+    }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols internationaux", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/CDG-MNL/2026-05-15/2026-06-01", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Tourisme Philippines", "url": "https://philippines.travel/", "symbole": "📘" },
+    { "legende": "Météo aux Philippines", "titre": "Météo Philippines", "url": "https://www.pagasa.dost.gov.ph/", "symbole": "🌤️" },
+    { "legende": "Vols domestiques", "titre": "Philippine Airlines", "url": "https://www.philippineairlines.com/", "symbole": "✈️" }
+  ]
+}
